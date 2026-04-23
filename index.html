@@ -2,26 +2,23 @@
 <html lang="zh-TW">
 <head>
     <meta charset="UTF-8">
-    <title>我的第一個聯網網站</title>
-    <style>
-        /* CSS：負責外觀 */
-        body { font-family: sans-serif; text-align: center; padding-top: 50px; background-color: #f0f8ff; }
-        button { padding: 10px 20px; font-size: 18px; cursor: pointer; border-radius: 5px; border: none; background: #007bff; color: white; }
-        button:hover { background: #0056b3; }
-    </style>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>我的進階待辦清單</title>
+    <link rel="stylesheet" href="style.css"> <!-- 引入 CSS -->
 </head>
 <body>
 
-    <h1>你好，世界！</h1>
-    <p>這是我的第一個 HTML + CSS + JS 網頁。</p>
-    <button onclick="showMessage()">點我試試</button>
+    <div class="container">
+        <h2>我的待辦清單</h2>
+        <div class="input-group">
+            <input type="text" id="todoInput" placeholder="新增一項任務...">
+            <button onclick="addTask()">新增</button>
+        </div>
+        <ul id="todoList">
+            <!-- 任務會出現在這裡 -->
+        </ul>
+    </div>
 
-    <script>
-        // JavaScript：負責行為
-        function showMessage() {
-            alert("恭喜！你的 JavaScript 運作正常！");
-        }
-    </script>
-
+    <script src="script.js"></script> <!-- 引入 JS -->
 </body>
 </html>
